@@ -1,4 +1,5 @@
 import {
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -9,6 +10,7 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import Stack from './navigation/Stack';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -36,8 +38,12 @@ function AppContent() {
       {/* Main Content */}
       <View style={styles.main}>
         <Text style={styles.mainText}>Welcome! Sweetie❤️</Text>
-        <Text style={styles.subText}>Hi! Tunmun</Text>
+        <Text style={styles.subText}>Ki Be Banngu</Text>
       </View>
+
+      <ScrollView>
+        <Stack/>
+      </ScrollView>
 
       {/* Footer */}
       <View style={styles.footer}>
